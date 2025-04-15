@@ -20,7 +20,7 @@ public class ListarAnimalesView extends javax.swing.JFrame {
         initComponents();
         listarAnimales();
     }
-    private void listarAnimales(){
+    public void listarAnimales(){
         ArrayList<AnimalViewModel> animales = Controlador.getAnimales();
         animalesGrid.setModel(new DefaultTableModel(new Object[][] {}, 
             new String[] { "Especie", "Edad", "Peso", "Sector", "Comida Fija", "Por. Peso" }));
@@ -181,7 +181,7 @@ public class ListarAnimalesView extends javax.swing.JFrame {
     }//GEN-LAST:event_calcularComidaActionPerformed
 
     private void agregarAnimalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarAnimalesActionPerformed
-        AgregarAnimalView view2 = new AgregarAnimalView();
+        AgregarAnimalView view2 = new AgregarAnimalView(this);
         view2.setVisible(true);
     }//GEN-LAST:event_agregarAnimalesActionPerformed
 
