@@ -64,6 +64,12 @@ public class Persistencia {
     public static ArrayList<Pais> getPaises() {
         return paises;
     }
+    
+        public static void agregarAnimal(Mamifero animal) {
+        if (animal != null) {
+            animales.add(animal);
+        }
+    }
 
     public static double getTotalComida(TipoAlimentacion tipoAlimentacion) {
         double total = 0;
